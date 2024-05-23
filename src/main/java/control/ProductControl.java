@@ -46,7 +46,7 @@ public class ProductControl extends HttpServlet {
 				ProductBean prodotto = model.doRetrieveByKey(codice);
 				request.setAttribute("prodottoDettaglio", prodotto);
 			} catch (SQLException e) {
-				e.printStackTrace();
+				//e.printStackTrace();
 			}
 			finally {
 				RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/productDetail.jsp");
@@ -72,9 +72,9 @@ public class ProductControl extends HttpServlet {
 				bean = model.doRetrieveByKey(Integer.parseInt(request.getParameter("codice")));
 				request.setAttribute("updateProd", bean);
 			} catch (NumberFormatException e) {
-				e.printStackTrace();
+				//e.printStackTrace();
 			} catch (SQLException e) {
-				e.printStackTrace();
+				//e.printStackTrace();
 			}
 			finally {
 				RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/modifica-prodotto.jsp"); 
